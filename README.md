@@ -2,17 +2,22 @@
 
 A reusable, framework-agnostic UI engineering baseline for AI coding agents and the developers who work with them. Use it to build consistent, accessible, maintainable, and scalable frontend applications.
 
-The standards are the source of truth. Agent-specific instruction files are adapters that point to them; they should not fork or redefine the guidance.
+The standards are the source of truth. Agent-specific instruction files are adapters that point to them; they should not fork or redefine the guidance. The resource is designed to help a team understand its project first, then adopt only the setup it needs.
 
-## Use this resource
+## Start here
 
-1. Copy or vendor this repository into your project, or link to it from your agent instructions.
-2. Add the contents of [`AGENTS.md`](AGENTS.md) to the instruction path your agent reads. Keep the canonical standards available in the repository.
-3. Read the project UI baseline template in [`templates/project-ui-baseline.md`](templates/project-ui-baseline.md), fill it in with project-specific conventions, and place it where your team maintains project instructions.
-4. Ask the agent to inspect the existing UI before changing it, then implement the requested change against these standards.
-5. Review the result with [`templates/ui-review-checklist.md`](templates/ui-review-checklist.md).
+1. Choose an adoption path in [Adopting the standards](guides/adopting-the-standards.md): an existing project or a new project.
+2. Ask your AI agent to follow [Project discovery](guides/project-discovery.md). It maps the architecture and UI conventions before recommending changes.
+3. Record confirmed facts, unknowns, and team choices in the [Project UI baseline](templates/project-ui-baseline.md). For a new app, use the architecture decision prompts in the discovery guide before choosing a structure.
+4. Add a short pointer to this resource in the instruction file your agent uses. Start from the [adapter example](examples/agent-adapter.example.md) and keep the canonical standards available in the repository.
+5. Make a small UI change, then review it with the [UI review checklist](templates/ui-review-checklist.md).
 
-This resource does not require a particular framework, CSS method, component library, build tool, or AI agent. Existing project conventions take precedence when they are deliberate and compatible with the requested work.
+You can adopt this incrementally. Discovery does not require a framework choice or trigger a rewrite. In an existing application, preserve deliberate conventions; in a new application, the agent helps compare options against your requirements and records the decision before scaffolding.
+
+## Adoption guides
+
+- [Adopting the standards](guides/adopting-the-standards.md): a short setup path for existing and greenfield projects.
+- [Project discovery](guides/project-discovery.md): what the agent inspects, how it reports findings, and how to guide initial architecture decisions.
 
 ## Standards
 
@@ -30,6 +35,7 @@ This resource does not require a particular framework, CSS method, component lib
 - [SCSS design tokens](examples/design-tokens.example.scss)
 - [CSS design tokens](examples/design-tokens.example.css)
 - [Component structure](examples/component-structure.example.md)
+- [Agent adapter](examples/agent-adapter.example.md)
 - [UI review checklist](templates/ui-review-checklist.md)
 - [Project UI baseline](templates/project-ui-baseline.md)
 
@@ -37,7 +43,7 @@ Examples illustrate possible implementations. Adapt their syntax and values to t
 
 ## Agent adapters
 
-Use the smallest adapter the agent needs. Keep project-specific choices in the project baseline and keep the detailed, reusable guidance in `standards/`.
+Use the smallest adapter the agent needs. Keep project-specific choices in the project baseline and keep the detailed, reusable guidance in `standards/`. The agent should discover the instruction mechanism supported by its current environment; the examples below are starting points, not promises about product behavior.
 
 | Agent | Adapter location | Suggested setup |
 | --- | --- | --- |

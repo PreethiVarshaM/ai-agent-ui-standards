@@ -2,6 +2,16 @@
 
 Use this file as an adapter to the canonical UI standards in `standards/`. The standards are the source of truth; do not create a conflicting parallel set of rules in agent-specific instructions.
 
+## First use in a project
+
+Before proposing a UI architecture or editing UI code, follow [`guides/project-discovery.md`](guides/project-discovery.md).
+
+- Determine whether this is an established project, a new project with constraints, or an empty/unclear starting point.
+- In established projects, report the architecture and conventions supported by repository evidence. Preserve them unless the user asks for a change.
+- In greenfield projects, help the developer choose a minimal architecture from their requirements. Explain tradeoffs and record accepted choices in the project UI baseline before scaffolding.
+- Separate observed facts, assumptions, unknowns, and recommendations. Never present a guessed stack or architecture as detected fact.
+- Discovery and recommendations do not authorize broad edits. Agree on the baseline before creating or reorganizing application structure.
+
 ## Before changing UI
 
 1. Inspect the repository structure, existing screens, shared components, design tokens, styling approach, and relevant project instructions.
