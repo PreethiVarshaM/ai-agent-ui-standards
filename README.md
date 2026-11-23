@@ -1,10 +1,25 @@
 # AI Agent UI Standards
 
-A reusable, framework-agnostic UI engineering baseline for AI coding agents and the developers who work with them. Use it to build consistent, accessible, maintainable, and scalable frontend applications.
+A framework-agnostic onboarding kit for AI coding agents. It maps existing frontend architecture, guides initial decisions for new projects, and turns agreed UI conventions into a reusable project baseline.
 
 The standards are the source of truth. Agent-specific instruction files are adapters that point to them; they should not fork or redefine the guidance. The resource is designed to help a team understand its project first, then adopt only the setup it needs.
 
-## Start here
+## Quick start
+
+Try the discovery workflow before changing code. Ask your coding agent:
+
+```text
+Read AGENTS.md and guides/project-discovery.md. Inspect this repository in
+read-only mode. Classify it as an established project, new project with
+constraints, or empty/unclear. Report the application structure, UI patterns,
+styling and tokens, state and data boundaries, and available verification
+commands. Cite repository paths for observations, separate facts from
+inferences, and list unknowns. Do not edit files or recommend a rewrite.
+```
+
+Review the result, correct anything the agent inferred incorrectly, and record confirmed conventions in [`templates/project-ui-baseline.md`](templates/project-ui-baseline.md). See the [sample discovery output](examples/project-discovery-output.example.md) for the expected level of detail. For a new project, use the [architecture setup guide](guides/project-discovery.md#new-project-guide-decisions-in-context) to agree on the initial structure before scaffolding.
+
+## Adoption path
 
 1. Choose an adoption path in [Adopting the standards](guides/adopting-the-standards.md): an existing project or a new project.
 2. Ask your AI agent to follow [Project discovery](guides/project-discovery.md). It maps the architecture and UI conventions before recommending changes.
@@ -18,6 +33,7 @@ You can adopt this incrementally. Discovery does not require a framework choice 
 
 - [Adopting the standards](guides/adopting-the-standards.md): a short setup path for existing and greenfield projects.
 - [Project discovery](guides/project-discovery.md): what the agent inspects, how it reports findings, and how to guide initial architecture decisions.
+- [Roadmap](ROADMAP.md): current focus and possible next steps.
 
 ## Standards
 
@@ -36,6 +52,7 @@ You can adopt this incrementally. Discovery does not require a framework choice 
 - [CSS design tokens](examples/design-tokens.example.css)
 - [Component structure](examples/component-structure.example.md)
 - [Agent adapter](examples/agent-adapter.example.md)
+- [Project discovery output](examples/project-discovery-output.example.md)
 - [UI review checklist](templates/ui-review-checklist.md)
 - [Project UI baseline](templates/project-ui-baseline.md)
 
