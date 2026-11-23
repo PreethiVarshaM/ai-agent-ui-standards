@@ -4,6 +4,19 @@ A framework-agnostic onboarding kit for AI coding agents. It maps existing front
 
 The standards are the source of truth. Agent-specific instruction files are adapters that point to them; they should not fork or redefine the guidance. The resource is designed to help a team understand its project first, then adopt only the setup it needs.
 
+## How the pieces fit
+
+The standards hold reusable guidance, the adapter tells the agent where to find it, and the project baseline records local facts and choices. The agent uses those inputs for a UI change, which the developer reviews.
+
+```mermaid
+flowchart LR
+    Standards[Shared UI standards] --> Adapter[Agent instruction adapter]
+    Adapter --> Agent[AI coding agent]
+    Baseline[Project UI baseline] --> Agent
+    Agent --> Change[UI change]
+    Change --> Review[Developer review]
+```
+
 ## Quick start
 
 Try the discovery workflow before changing code. Ask your coding agent:

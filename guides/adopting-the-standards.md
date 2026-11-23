@@ -14,6 +14,29 @@ Avoid a stale copied snapshot that silently diverges from the canonical standard
 
 ## 2. Choose your starting path
 
+The two paths meet at a reviewed project baseline. Existing projects begin with evidence from the code; new projects begin with requirements and developer-approved decisions.
+
+```mermaid
+flowchart TD
+    Start[Choose starting point] --> Existing{Does a frontend already exist?}
+    Existing -->|Yes| Inspect[Inspect project read-only]
+    Inspect --> Confirm[Review findings and unknowns]
+    Confirm --> Baseline[Record confirmed project baseline]
+    Existing -->|No or unclear| Needs[Gather product and technical needs]
+    Needs --> Proposal[Propose a minimal architecture]
+    Proposal --> Accepted{Developer accepts baseline?}
+    Accepted -->|Not yet| Needs
+    Accepted -->|Yes| Baseline
+    Baseline --> IsNew{New project?}
+    IsNew -->|Yes| Scaffold[Scaffold agreed structure]
+    Scaffold --> Configure[Configure agent adapter]
+    IsNew -->|No| Configure
+    Configure --> Change[Try one UI change]
+    Change --> Review[Review with checklist]
+```
+
+In an existing app, the baseline captures current conventions. In a new app, the developer confirms the baseline before the agent scaffolds the agreed structure. Both paths then use the same adapter and review checklist.
+
 ### Existing application
 
 1. Ask the agent to follow [Project discovery](project-discovery.md) in read-only mode.
