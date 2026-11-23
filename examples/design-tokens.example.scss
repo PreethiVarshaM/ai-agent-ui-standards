@@ -1,0 +1,36 @@
+// Illustrative only: adapt names, values, and organization to the project.
+:root {
+  // Color roles
+  --color-surface: #ffffff;
+  --color-surface-raised: #f7f8fa;
+  --color-text: #18202b;
+  --color-text-muted: #596579;
+  --color-border: #d5dbe4;
+  --color-action: #2457c5;
+  --color-action-text: #ffffff;
+  --color-danger: #b42318;
+  --color-success: #18794e;
+
+  // Typography
+  --font-family-base: system-ui, sans-serif;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --line-height-body: 1.5;
+
+  // Spacing
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  // Shape and depth
+  --border-width-default: 1px;
+  --radius-control: 0.375rem;
+  --radius-panel: 0.75rem;
+  --shadow-panel: 0 2px 8px rgb(24 32 43 / 10%);
+}
+
+// Sass can build on CSS custom properties when compile-time helpers are useful.
+$content-max-width: 72rem;
